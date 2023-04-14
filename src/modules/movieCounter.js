@@ -1,16 +1,13 @@
 const movieCounter = (count) => {
-    const counter = document.getElementById('counter')
-    count = document.querySelectorAll('.card').length
-    console.log(count)
+  const counter = document.getElementById('counter');
+  count = document.querySelectorAll('.card').length;
 
-    if(count === 0) count = 'No movies'
-    if(count > 0 && count < 999) count = count.length
-    if(count > 999) count = '999+'
+  if (count === 0) count = 'No movies';
+  if (count > 999) count = '999+';
 
-    counter.innerText = count
-    console.log(counter)
-    return count
+  counter.innerText = count;
+  return count;
+};
 
-} 
-
-export { movieCounter }
+/* eslint-disable import/prefer-default-export */
+export { movieCounter };
