@@ -1,12 +1,12 @@
-const movies = 'https://api.tvmaze.com/shows'
+const movies = 'https://api.tvmaze.com/shows';
 
 const getMovies = async () => {
-    try {
-        const result = await fetch(movies)
-        let output = ''
-        const data = await result.json()
-        data.forEach((movie) => {
-            const newMovie = `<div class="card">
+  try {
+    const result = await fetch(movies);
+    let output = '';
+    const data = await result.json();
+    data.forEach((movie) => {
+      const newMovie = `<div class="card">
                 <img src=${movie.image.medium}>
                 <h2 class="movie-name">${movie.name}<button class="like"><i class="fa fa-heart-o"></button></i></h2>
                 <div class="card-buttons">
@@ -15,15 +15,16 @@ const getMovies = async () => {
                 </div>
             </div>
             `;
-            output += newMovie
-        })
+      output += newMovie;
+    });
 
-        const displayMovies = document.querySelector('.display-container')
-        displayMovies.innerHTML = output;
-    }
-    catch (error) {
-        console.error(error)
-    }
+    const displayMovies = document.querySelector('.display-container');
+    displayMovies.innerHTML = output;
+  } catch (error) {
+    const displayMovies = document.querySelector('.display-container');
+    displayMovies.innerText = error;
+  }
 };
 
-export { getMovies }
+/* eslint-disable import/prefer-default-export */
+export { getMovies };
