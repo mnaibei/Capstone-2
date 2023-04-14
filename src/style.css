@@ -5,3 +5,82 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
 }
+
+.desktop-nav {
+    display: flex;
+    background-color: slategray;
+    height: 50px;
+    /* justify-content: center; */
+    /* border: 2px solid; */
+    padding: 10px;
+    margin-bottom: 10px;
+    /* position: fixed; */
+}
+
+.menu{
+    /* border: 2px solid green; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.display-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid;
+    min-height: 300px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.movie-name {
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-evenly; */
+    /* border: 2px solid red; */
+    /* width: 230px; */
+    align-self: center;
+}
+
+.like {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.like:active{
+    color: red;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.comments-button {
+    background-color: blue;
+    width: 150px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
