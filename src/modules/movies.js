@@ -13,7 +13,6 @@ const getMovies = async (test) => {
                 <h2 class="movie-name">${movie.name}<button class="like"><i class="fa fa-heart-o" id=${movie.id}></button></i><span class="likesCount" id="likesCount-${movie.id}"></span></h2>
                 <div class="card-buttons">
                 <button class="comments-button" id=${movie.id}>Comment</button>
-                <!-- <button class="reservations-button">Reservations</button> -->
                 </div>
             </div>
             `;
@@ -43,9 +42,9 @@ const getMovies = async (test) => {
       button.addEventListener('click', async (item) => {
         const { id } = item.target; // get the ID of the clicked element
         postLikes(id); // pass the ID to postLikes
-        updateLikesCount();
         item.preventDefault();
       });
+      updateLikesCount();
     });
   } catch (error) {
     const displayMovies = document.querySelector('.display-container');
